@@ -1,12 +1,15 @@
 #!/bin/sh
-problem=$(dpkg -s python3-tk|grep installed)
-path=$(pwd)
-echo $path
-echo Checking for tkinter: $problem
-sudo pip3 install psutil
-sudo apt-get install git python3-tk python3-pil python3-pil.imagetk
+echo '##########################################'
+echo 'Installing packages for CommanderPi'
+echo '##########################################'
+sudo pacman -S tk python-pillow python-pip
+
+sudo pip install psutil
 sudo chmod +x ${path}/src/start.sh
-sudo python3 c_desktop.py $USER
+echo '##########################################'
+echo 'Creating a shortcut on the desktop'
+echo '##########################################'
+sudo python c_desktop.py $USER
 if [ -d "$HOME/Desktop" ]
 then
     sudo chown $USER ~/Desktop/commanderpi.desktop
