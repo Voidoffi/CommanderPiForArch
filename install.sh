@@ -2,7 +2,7 @@
 echo '##########################################'
 echo 'Installing packages for CommanderPi'
 echo '##########################################'
-sudo pacman -S tk python-pillow python-pip
+sudo pacman -S --noconfirm tk python-pillow python-pip
 
 sudo pip install psutil
 sudo chmod +x ${path}/src/start.sh
