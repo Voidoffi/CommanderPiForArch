@@ -18,7 +18,7 @@ Icon={dir_path}/src/icons/Icon.png
 Categories=Utility;
 Version=1.0
 Type=Application
-Terminal=false
+Terminal=true
 StartupNotify=true"""
 print(f_content)
 
