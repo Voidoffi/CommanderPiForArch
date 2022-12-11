@@ -9,16 +9,17 @@ home_path = expanduser(f"~{user}")
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 print(dir_path)
-f_content = f"""[Desktop Entry]\n
-                Name=CommanderPi\n
-                Comment=System info and overclocking\n
-                Exec={dir_path}/src/start.sh\n
-                Icon={dir_path}/src/icons/Icon.png\n
-                Categories=Utility;\n
-                Version=1.0\n
-                Type=Application\n
-                Terminal=false\n
-                StartupNotify=true"""
+f_content = \
+f"""[Desktop Entry]
+Name=CommanderPi
+Comment=System info and overclocking
+Exec={dir_path}/src/start.sh
+Icon={dir_path}/src/icons/Icon.png
+Categories=Utility;
+Version=1.0
+Type=Application
+Terminal=false
+StartupNotify=true"""
 print(f_content)
 
 d_dir = home_path+"/Desktop/commanderpi.desktop"
